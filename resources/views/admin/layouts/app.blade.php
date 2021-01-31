@@ -1,8 +1,8 @@
 @extends('layouts.app')
 
     @push('stylesheet')
-        <link rel="stylesheet" href="css/sb-admin-2.css">
-        <link rel="stylesheet" href="admin/vendor/fontawesome-free/css/all.min.css">
+        <link rel="stylesheet" href="../../css/sb-admin-2.css">
+        <link rel="stylesheet" href="../../admin/vendor/fontawesome-free/css/all.min.css">
     @endpush
 @section('content')
 <section id="wrapper">
@@ -48,5 +48,5 @@
 </div>
 @endsection
 @push('scripts')
-    <script src="admin/js/sb-admin-2.min.js"></script>
+    <script src="../../admin/js/sb-admin-2.min.js"></script>
 @endpush

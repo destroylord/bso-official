@@ -14,9 +14,10 @@
 
             <!-- Nav Item - Dashboard -->
             <li class="nav-item">
-                <a class="nav-link" href="{{ route('dashboard') }}">
+                <a class="nav-link" href="javascript:void(0)">
                     <i class="fas fa-fw fa-tachometer-alt"></i>
-                    <span>Dashboard</span></a>
+                    <span>Dashboard</span>
+                </a>
             </li>
 
             <!-- Divider -->
@@ -27,9 +28,10 @@
                 Blogs
             </div>
             <li class="nav-item ">
-                <a class="nav-link " href="{{ route('addPost') }}">
+                <a class="nav-link " href="{{ route('admin.posts.create') }}">
                     <i class="fas fa-fw fa-plus"></i>
-                    <span>Tambah Post</span></a>
+                    <span>Tambah Post</span>
+                </a>
             </li>
             <!-- Heading -->
             <div class="sidebar-heading">
@@ -46,9 +48,9 @@
                 <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
                     <div class="bg-white py-2 collapse-inner rounded">
                         <h6 class="collapse-header">Lainnya</h6>
-                        <a class="collapse-item" href="{{ route('banner') }}">Banner</a>
-                        <a class="collapse-item" href="{{ route('visimisi') }}">Visi dan Misi</a>
-                        <a class="collapse-item" href="{{ route('struktur') }}">Struktur Organisasi</a>
+                        <a class="collapse-item" href="{{ route('admin.banners.index') }}">Banner</a>
+                        <a class="collapse-item" href="{{ route('admin.vimis.index') }}">Visi dan Misi</a>
+                        <a class="collapse-item" href="#">Struktur Organisasi</a>
                     </div>
                 </div>
             </li>

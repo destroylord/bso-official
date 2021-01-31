@@ -18,11 +18,14 @@
             <div class="col-md-12">
                 <div class="card">
                     <div class="card-body">
-                        <input type="file">
+                        <form action="{{ route('admin.banners.store') }}" method="POST" enctype="multipart/form-data">
+                            @csrf
+                            <input type="file"  name="images">
                     </div>
                     <div class="card-footer">
-                        <button class="btn btn-primary btn-block">Update</button>
+                        <button type="submit" class="btn btn-primary btn-block">Update</button>
                     </div>
+                        </form>
                 </div>
             </div>
         </div>
