@@ -12,4 +12,9 @@ class Vimi extends Model
     protected $table = 'vimis';
 
     protected $guarded = [];
+
+    public function getImagesVisiAttribute()
+    {
+        return '/storage/'. $this->images;
+    }
 }
