@@ -14,16 +14,16 @@
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                   <ul class="navbar-nav m-auto">
                     <li class="nav-item active">
-                      <a class="nav-link" href="#">Beranda <span class="sr-only">(current)</span></a>
+                      <a class="nav-link" href="/">Beranda <span class="sr-only">(current)</span></a>
                     </li>
                     <li class="nav-item">
-                      <a class="nav-link" href="#">Kontak</a>
+                      <a class="nav-link" href="/kontak">Kontak</a>
                     </li>
                     <li class="nav-item">
                       <a class="nav-link" href="#">Struktur Organisasi</a>
                     </li>
                     <li class="nav-item">
-                      <a class="nav-link" href="#">Blog</a>
+                      <a class="nav-link" href="/blogs">Blog</a>
                     </li>
                   </ul>
                   <form class="form-inline my-2 my-lg-0">

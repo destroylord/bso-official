@@ -15,4 +15,15 @@ class WebController extends Controller
             'posts' => Post::latest()->paginate(12)
         ]);
     }
+    public function contact()
+    {
+        return view('web.contact');
+    }
+
+    public function blogs()
+    {
+        return view('web.blogs', [
+            'posts' => Post::all()
+        ]);
+    }
 }
