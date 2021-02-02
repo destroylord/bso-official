@@ -6,7 +6,11 @@
 @endpush
 
 @section('content')
-    @include('web.includes.header')
+    @if (Request::is('/'))
+        @include('web.includes.header')
+    @else
+        @include('web.includes.header2')
+    @endif
         @yield('page')
     @include('web.includes.footer')
 @endsection

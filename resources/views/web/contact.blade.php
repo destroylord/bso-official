@@ -1,7 +1,12 @@
 @extends('web.app')
 
 @section('page')
-    <section class="">
+    <div class="contact-banners">
+        <div class="contact-text">
+            <h4>Kontak</h4>
+        </div>
+    </div>
+    <section>
         <div class="container">
             <div class="row">
                 <div class="col-md-12 display-6 font-weight-bold" style="font-size: 32px">Hubungi Kami</div>
@@ -10,6 +15,7 @@
             <div class="row mt-5">
                 <div class="col-md-5">
                     <form action="#" method="post">
+                        @csrf
                         <div class="form-group">
                             <label for="">Nama Lengkap*</label>
                             <input id="" class="form-control" type="text" name="">

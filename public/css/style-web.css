@@ -268,3 +268,33 @@ footer {
         padding: 15px;
     }
 }
+
+
+/* Contact Banner */
+
+.contact-banners {
+    background-image: url('../web/img/hp.jpg');
+    min-height: 400px;
+    height: 100%;
+    background-position: center;
+    background-size: cover;
+    position: relative;
+}
+.contact-banners .contact-text {
+    font-size: 44px;
+    font-weight: 400;
+    position: relative;
+    z-index: 2;
+    margin : 0px 0px 12px
+}
+
+/* Blogs Banners */
+
+.blog-banner {
+    background-image: url('../web/img/hp.jpg');
+    min-height: 400px;
+    height: 100%;
+    background-position: center;
+    background-size: cover;
+    position: relative;
+}
