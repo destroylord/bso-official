@@ -26,4 +26,8 @@ class WebController extends Controller
             'posts' => Post::all()
         ]);
     }
+    public function detailBlogs()
+    {
+        return view('web.detail-blog');
+    }
 }

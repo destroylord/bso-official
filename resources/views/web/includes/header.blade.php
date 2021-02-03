@@ -26,9 +26,9 @@
                       <a class="nav-link" href="/blogs">Blog</a>
                     </li>
                   </ul>
-                  <form class="form-inline my-2 my-lg-0">
-                    <button class="header-btn my-2 my-sm-0" type="submit">Login</button>
-                  </form>
+                  {{-- <form class="form-inline my-2 my-lg-0"> --}}
+                    <a href="/login" class="btn btn-primary header-btn my-2 my-lg-0" >Login</a>
+                  {{-- </form> --}}
                 </div>
               </nav>
         </div>

@@ -5,10 +5,10 @@
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Perspiciatis quibusdam inventore facilis dignissimos corporis cupiditate quis laborum dolorum maxime, at error hic temporibus veniam eligendi alias pariatur,
         </p>
         <div class="socials">
-            <a href="#"> <i class="fa fa-facebook"></i> </a>
-            <a href="#"> <i class="fa fa-youtube"></i> </a>
-            <a href="#"> <i class="fa fa-twitter"></i> </a>
-            <a href="#"> <i class="fa fa-tumblr"></i> </a>
+            <a href="#"> <i class="fab fa-facebook-f"></i> </a>
+            <a href="#"> <i class="fab fa-youtube"></i> </a>
+            <a href="#"> <i class="fab fa-twitter"></i> </a>
+            <a href="#"> <i class="fab fa-instagram"></i> </a>
         </div>
     </div>
     <ul class="footer-right">
@@ -45,7 +45,7 @@
             </ul>
         </li>
     </ul>
-    <div class="footer-bottom">
-        <p>All Right reserved by &copy; Dafrin 2021</p>
-    </div>
 </footer>
+<div class="footer-bottom">
+    <p>All Right reserved by &copy; Dafrin 2021</p>
+</div>

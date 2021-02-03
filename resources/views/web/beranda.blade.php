@@ -15,7 +15,7 @@
     </section>
     <div class="main-content">
         <section id="cardes">
-            <div class="container shadow-sm">
+            <div class="container shadow-sm" style="background: #fff;">
                 <div class="row">
                     <div class="col-md-3">
                         <div class="media border-0 p-3">

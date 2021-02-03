@@ -17,7 +17,7 @@
             @foreach ($posts as $post)
                 <div class="col-md-4">
                     <div class="card">
-                        <img class="card-img-top" src="{{ $post->takeImage }}" alt="Thumbnail">
+                        <img class="card-img-top" id="imgCard" src="{{ $post->takeImage }}" alt="Thumbnail">
                         <div class="card-body"> 
                             <div class="card-title text-uppercase font-weight-bold ">
                                 <a href="javascript:void(0)" class="text-decoration-none"> {{ $post->title }} </a>

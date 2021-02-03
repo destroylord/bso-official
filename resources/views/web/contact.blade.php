@@ -6,7 +6,8 @@
             <h4>Kontak</h4>
         </div>
     </div>
-    <section>
+    {{-- <section> --}}
+    <div class="section-contect" style=" background-color: white;padding: 4rem 0rem 4rem;">
         <div class="container">
             <div class="row">
                 <div class="col-md-12 display-6 font-weight-bold" style="font-size: 32px">Hubungi Kami</div>
@@ -57,5 +58,6 @@
                 </div>
             </div>
         </div>
-    </section>
+    </div>
+    {{-- </section> --}}
 @endsection

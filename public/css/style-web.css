@@ -1,6 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400;1,500;1,600&display=swap');
 
-
+/* Caladea */
+@import url('https://fonts.googleapis.com/css2?family=Caladea:ital@0;1&display=swap');
 
 @media only screen and (min-width : 1200px){
     .nav-item > .nav-link {
@@ -33,7 +34,14 @@
 }
 body {
     font-family: 'Montserrat', sans-serif;
+    margin: 0;
 }
+
+article {
+    font-family: 'Caladea', serif;
+    font-size: 18px;
+}
+
 .content-banner {
     color : #ffffff;
     background-image: url('../web/img/hp.jpg');
@@ -97,13 +105,15 @@ body {
 }
 
 .nav-item .nav-link:hover {
-    color :aqua;
+    color : #58baf4;
 }
 
 .header-btn {
     color: #ffffff;
     border-radius: 20px;
-    background-color: gray;
+    box-shadow: 0 4px 8px 0 rgba(94, 192, 250, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    background: rgb(94,192,250);
+    background: linear-gradient(180deg, rgba(94,192,250,1) 0%, rgba(8,115,177,1) 100%);
     border: none;
     font-weight: 500;
     outline: none;
@@ -127,7 +137,7 @@ body {
 }
 
 .navbar-scroll .nav-item .nav-link {
-    color: black;
+    color: rgb(41, 41, 41);
 }
 
 .navbar-scroll .header-btn {
@@ -159,9 +169,13 @@ section#vimi {
     height: 100%;
 }
 
+section:nth-of-type(odd){
+    background-color: #f7f7f7;
+    /* color: white; */
+}
 section:nth-of-type(even){
-    background-color: tomato;
-    color: white;
+    background-color: white;
+    /* color: white; */
 }
 
 /* card */
@@ -186,12 +200,20 @@ footer {
      flex-flow: row wrap;
      padding: 50px;
      color : #fff;
-     background-color: crimson;
+     background-color:#474646;
 }
 
 .footer > * {
-    margin-right: 1.25em;
-    margin-bottom : 2em
+  flex : 1 100%;
+}
+
+.footer-left {
+    margin-right : 1.25em;
+    margin-bottom: 2em;
+}
+
+.footer-left img {
+    width: 50%;
 }
 
 .footer ul {
@@ -228,7 +250,9 @@ footer {
 .footer-bottom {
     text-align: center;
     color : #999;
-    padding-top: 50px;
+    background: #2c2e32;
+    height: 70px;
+    padding-top: 25px;
 }
 
 .footer-left p {
@@ -237,8 +261,8 @@ footer {
 }
 
 .socials a{
-    color : white;
-    background: #364a62;
+    /* color : white; */
+    /* background: #364a62; */
     width: 40px;
     height: 40px;
     display: inline-block;
@@ -247,8 +271,8 @@ footer {
 
 .socials a i{
     color : #e7f2f4;
-    padding: 10px 12px;
-    font-size: 20px;;
+    padding: 14px;
+    font-size: 20px;
 }
 
 @media screen and (min-width : 600px) {
