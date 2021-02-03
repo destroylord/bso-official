@@ -297,13 +297,16 @@ footer {
 /* Contact Banner */
 
 .contact-banners {
-    background-image: url('../web/img/hp.jpg');
+    background-image: url('../web/img/banner-contact.jpg');
     min-height: 400px;
     height: 100%;
-    background-position: center;
+    background-position: center bottom;
     background-size: cover;
     position: relative;
+    background-repeat: no-repeat;
+    background-attachment: fixed; 
 }
+
 .contact-banners .contact-text {
     font-size: 44px;
     font-weight: 400;
@@ -315,10 +318,21 @@ footer {
 /* Blogs Banners */
 
 .blog-banner {
-    background-image: url('../web/img/hp.jpg');
+    background-image: url('../web/img/banners-blog.jpg');
     min-height: 400px;
+    background-attachment: fixed;
     height: 100%;
-    background-position: center;
+    background-position: center bottom;
+    background-repeat: no-repeat;
     background-size: cover;
     position: relative;
 }
+
+@media only screen and (max-width: 990px) {
+    .blog-banner  {
+      background-attachment: scroll;
+    }
+    .contact-banners  {
+        background-attachment: scroll;
+      }
+  }
