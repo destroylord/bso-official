@@ -15,8 +15,9 @@ class CreateStructuresTable extends Migration
     {
         Schema::create('structures', function (Blueprint $table) {
             $table->increments('id');
-            $table->string('postion');
+            $table->string('position');
             $table->string('name');
+            $table->string('images')->nullable();
             $table->unsignedInteger('category_structure_id')->nullable();
             $table->timestamps();
         });

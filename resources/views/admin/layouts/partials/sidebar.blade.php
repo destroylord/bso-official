@@ -14,7 +14,7 @@
 
             <!-- Nav Item - Dashboard -->
             <li class="nav-item">
-                <a class="nav-link" href="javascript:void(0)">
+                <a class="nav-link" href="{{ route('admin.dashboard') }}">
                     <i class="fas fa-fw fa-tachometer-alt"></i>
                     <span>Dashboard</span>
                 </a>
@@ -50,7 +50,7 @@
                         <h6 class="collapse-header">Lainnya</h6>
                         <a class="collapse-item" href="{{ route('admin.banners.index') }}">Banner</a>
                         <a class="collapse-item" href="{{ route('admin.vimis.index') }}">Visi dan Misi</a>
-                        <a class="collapse-item" href="#">Struktur Organisasi</a>
+                        <a class="collapse-item" href="{{ route('admin.so.create') }}">Struktur Organisasi</a>
                     </div>
                 </div>
             </li>

@@ -2,13 +2,12 @@
 
 
 use Illuminate\Support\Facades\Route;
-use App\Http\Controllers\Admin\{DashboardController, PostController, BannerController, VimiController};
+use App\Http\Controllers\Admin\{DashboardController, PostController, BannerController, StructureController, VimiController};
 
 // Route admin panel
 Route::group(['middleware' => ['auth']], function () {
-    Route::get('/dashboard', DashboardController::class, [
-        'as' => 'admin'
-    ]);
+    Route::get('/dashboard', DashboardController::class)
+    ->name('admin.dashboard');
     Route::resource('posts', PostController::class, 
     [
         'as' => 'admin'
@@ -19,6 +18,9 @@ Route::group(['middleware' => ['auth']], function () {
     Route::resource('vimis', VimiController::class, [
         'as' => 'admin'
     ]);
+
+    Route::get('organizational-structure', [StructureController::class, 'create'])
+        ->name('admin.so.create');
 });
 
 
