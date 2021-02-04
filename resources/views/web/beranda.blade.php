@@ -15,43 +15,44 @@
     </section>
     <div class="main-content">
         <section id="cardes">
-            <div class="container shadow-sm" style="background: #fff;">
+            <div class="container">
                 <div class="row">
                     <div class="col-md-3">
-                        <div class="media border-0 p-3">
-                            <img src="img_avatar3.png" alt="img-logo" class="mr-3 mt-3 rounded-circle">
-                            <div class="media-body">
-                              <h6>BPH</h6>
-                              <p>Badan Pengurus Harian</p>
-                            </div>
-                          </div>
-                    </div>
-                    <div class="col-md-3">
-                        <div class="media border-0 p-3">
-                            <img src="img_avatar3.png" alt="img-logo" class="mr-3 mt-3 rounded-circle">
-                            <div class="media-body">
-                              <h6>Divisi Perhub</h6>
-                              <p>Perhubungan</p>
-                            </div>
+                    {{-- <img src="img_avatar3.png" alt="img-logo" class="">s --}}
+                    <div class="card text-center">
+                        <div class="card-body">
+                            <i class="far fa-id-card mr-3 mt-3 rounded-circle"></i>
+                            <h6>BPH</h6>
+                            <p>Badan Pengurus Harian</p>
                         </div>
                     </div>
-                    <div class="col-md-3">
-                        <div class="media border-0 p-3">
-                            <img src="img_avatar3.png" alt="img-logo" class="mr-3 mt-3 rounded-circle">
-                            <div class="media-body">
-                              <h6>Divisi MinBak</h6>
-                              <p>Minat Bakat</p>
-                            </div>
-                        </div>
                     </div>
                     <div class="col-md-3">
-                        <div class="media border-0 p-3">
-                            <img src="img_avatar3.png" alt="img-logo" class="mr-3 mt-3 rounded-circle">
-                            <div class="media-body">
-                              <h6>Divisi KWU</h6>
-                              <p>Kewirausahaan</p>
-                            </div>
+                    <div class="card text-center">
+                        <div class="card-body">
+                            <i class="fas fa-book-reader mr-3 mt-3 rounded-circle"></i>
+                            <h6>Divisi Perhub</h6>
+                            <p>Perhubungan</p>
                         </div>
+                    </div>
+                    </div>
+                    <div class="col-md-3">
+                    <div class="card text-center">
+                        <div class="card-body">
+                            <i class="fas fa-film mr-3 mt-3 rounded-circle"></i>
+                            <h6>Divisi MinBak</h6>
+                            <p>Minat Bakat</p>
+                        </div>
+                    </div>
+                    </div>
+                    <div class="col-md-3">
+                    <div class="card text-center">
+                        <div class="card-body">
+                            <i class="fas fa-gift mr-3 mt-3 rounded-circle"></i>
+                            <h6>Divisi KWU</h6>
+                            <p>Kewirausahaan</p>
+                        </div>
+                    </div>
                     </div>
                 </div>
             </div>
@@ -60,19 +61,24 @@
             <div class="container">
                 <div class="row">
                     <div class="col-md-12">
-                        <h2 class="text-center py-4">
+                        <h2 class="text-center">
                             Visi dan Misi
                         </h2>
                     </div>
                 </div>
-                <div class="row">
+                <div class="row mt-4">
                     <div class="col-md-6">
-                        <p>
-                            {{-- {{ $visimisi->visi }} --}}
+                        <h4>Visi</h4>
+                        <p style="line-height:1.6">
+                            {{ $visimisi->visi }}
+                        </p>
+                        <h4>Misi</h4>
+                        <p style="line-height:1.6">
+                            {{ $visimisi->misi }}
                         </p>
                     </div>
                     <div class="col-md-6">
-                       <img src="{{ 'public/storage/vimi/images/1612060263.jpeg' }}" alt="" class="img-fluid">
+                       <img src="{{ $visimisi->ImagesVisi }}" alt="" class="img-fluid  w-100">
                     </div>
                 </div>
             </div>

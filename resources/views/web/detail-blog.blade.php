@@ -1,20 +1,22 @@
 @extends('web.app')
-
+@push('stylesheet')
+    <link rel="stylesheet" href="../css/style-web.css">
+@endpush
 @section('page')
     <section>
         <div class="container">
             <div class="row d-flex justify-content-center mt-4">
                 <div class="col-md-8">
-                    <h2>
-                        10 tindakan yang harus kalian lakukan sebelum memulai tidur
+                    <h2 class="text-uppercase font-weight-bold">
+                        {{ $post->title }}
                     </h2>
                     <div class="d-flex justify-content-start mt-2">
                         <img src="" alt="Img" class="rounded">
                         <small class="mr-3"><p>Dafrin Maulana, 26 Oktober 2021</p></small>
                     </div>
-                    <img src="" alt="">
-                    <article>
-                        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Amet quia repellat necessitatibus iste maxime reiciendis aliquam! Nesciunt, numquam dolorum. Blanditiis temporibus laboriosam totam ab cum eaque voluptatibus, maxime odio saepe?
+                    <img src="{{ $post->takeimage }}" class="w-100" alt="">
+                    <article class="mt-4 py-4" style="line-height: 1.8">
+                        {{ $post->description }}
                     </article>
                 </div>
             </div>

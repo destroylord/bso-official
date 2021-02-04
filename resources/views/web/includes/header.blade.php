@@ -3,7 +3,7 @@
         <div class="container-fluid px-lg-5">
             <nav class="navbar navbar-expand-lg my-navbar">
                 <a class="navbar-brand" href="#"> <span class="logo">
-                    <img src="{{ asset('web/img/logo5.png') }}" alt="logo-img" class="img-fluid" style="width: 30p; margin : -3px 0px 0px 0px">Dafrin Web </span>
+                    <img src="{{ asset('web/img/logo5.png') }}" alt="logo-img" class="img-fluid" style="width: 30p; margin : -3px 0px 0px 0px">BSO</span>
                 </a>
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                   <span class="navbar-toggler-icon">

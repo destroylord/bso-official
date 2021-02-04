@@ -1,4 +1,7 @@
 @extends('web.app')
+
+
+
 @section('page')
         <div class="blog-banner">
             
@@ -20,7 +23,7 @@
                         <img class="card-img-top" id="imgCard" src="{{ $post->takeImage }}" alt="Thumbnail">
                         <div class="card-body"> 
                             <div class="card-title text-uppercase font-weight-bold ">
-                                <a href="javascript:void(0)" class="text-decoration-none"> {{ $post->title }} </a>
+                                <a href="{{ route('blog.show', $post->slug ) }}" class="text-decoration-none"> {{ $post->title }} </a>
                             </div>
                             <div class="card-text text-muted">
                                 <p style="font-size: 14px">

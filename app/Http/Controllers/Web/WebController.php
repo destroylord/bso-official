@@ -11,7 +11,7 @@ class WebController extends Controller
     public function beranda()
     {
         return view('web.beranda',[
-            'visimisi' => Vimi::all(),
+            'visimisi' => Vimi::where('id',1)->firstOrFail(),
             'posts' => Post::latest()->paginate(12)
         ]);
     }
@@ -26,8 +26,9 @@ class WebController extends Controller
             'posts' => Post::all()
         ]);
     }
-    public function detailBlogs()
+    public function detailBlogs($slug)
     {
-        return view('web.detail-blog');
+        $post = Post::where('slug',$slug)->first();
+        return view('web.detail-blog',compact('post'));
     }
 }
