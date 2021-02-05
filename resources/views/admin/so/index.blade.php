@@ -9,7 +9,7 @@
                     <button class="btn btn-primary add_more_input">Tambah input</button>
                 </div>
                 <div class="card-body">
-                <form action="" method="POST" enctype="multipart/form-data">
+                <form action="" method="POST" id="formSubmit" enctype="multipart/form-data">
                     @csrf
                     <div class="inputs_div">
                         <div class="form-group">               
@@ -23,6 +23,7 @@
                         <div class="form-group">
                             <label for="">Foto Anda</label>
                             <input type="file" class="form-control" name="images[]">
+                            <span class="text-danger" id="image-input-error"></span>
                         </div>
                     </div>
                 </div>
@@ -36,7 +37,7 @@
                         </h6>
                     </div>
                     <div class="card-body">
-                        <select name="" id="" class="form-control">
+                        <select name="category_strucure_id" id="category_structure" class="form-control">
                             <option value="" selected disabled>Pilih kategori</option>
                             @foreach ($category_structures as $cs)
                                 <option value="{{ $cs->id }}">{{ $cs->name }}</option>
@@ -44,7 +45,7 @@
                         </select>
                     </div>
                     <div class="card-footer">
-                        <button class="btn btn-primary btn-block">Kirim</button>
+                        <button type="submit" class="btn btn-primary btn-block">Kirim</button>
                     </div>
                     </form>
                 </div>
@@ -55,7 +56,25 @@
 
 
 @push('scripts')
-    <script>
+    <script type="text/javascript">
+        $(function(){
+            $.ajaxSetup({
+                    headers: {
+                        'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+                    }
+                });
+        })
+
+
+        
+        $('#formSubmit').submit(function(e){
+            e.preventDefault();
+            
+            alert('hello')
+            let formData = new FormData(this);
+            $('#image-input-error').text('');
+
+        })
 
         // add and remove input form
         $(function(){
@@ -84,9 +103,7 @@
                 var target_input = $(this).parent();
                 target_input.remove();
             })
-        })
+        });
 
-
-        
     </script>
 @endpush

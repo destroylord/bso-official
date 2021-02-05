@@ -15,7 +15,7 @@ class StructureController extends Controller
             'category_structures' => CategoryStructure::all()
         ]);
     }
-    
+
     public function store(Request $request)
     {
         
