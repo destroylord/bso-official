@@ -3,6 +3,9 @@
 use App\Http\Controllers\Web\WebController;
 use Illuminate\Support\Facades\Route;
 
+Route::get('/', function(){
+        echo "hello";
+});
 
 Route::get('/', [WebController::class, 'beranda']);
 Route::get('/kontak', [WebController::class, 'contact']);
