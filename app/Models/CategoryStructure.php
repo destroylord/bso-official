@@ -10,6 +10,10 @@ class CategoryStructure extends Model
 {
     use HasFactory;
 
+    protected $fillable = [
+        'name'
+    ];
+
     public function structures()
     {
         return $this->hasMany(Structure::class);

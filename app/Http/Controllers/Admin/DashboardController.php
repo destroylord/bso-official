@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\Admin;
 
 use App\Http\Controllers\Controller;
+use App\Models\Post;
 use Illuminate\Http\Request;
 
 class DashboardController extends Controller
@@ -15,6 +16,8 @@ class DashboardController extends Controller
      */
     public function __invoke(Request $request)
     {
-        return view('admin.blank.index');
+        return view('admin.blank.index',[
+            'blog' => Post::all()
+        ]);
     }
 }

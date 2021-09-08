@@ -50,7 +50,7 @@
                         <h6 class="collapse-header">Lainnya</h6>
                         <a class="collapse-item" href="{{ route('admin.banners.index') }}">Banner</a>
                         <a class="collapse-item" href="{{ route('admin.vimis.index') }}">Visi dan Misi</a>
-                        <a class="collapse-item" href="{{ route('admin.so.create') }}">Struktur Organisasi</a>
+                        <a class="collapse-item" href="{{ route('admin.structures.index') }}">Struktur Organisasi</a>
                     </div>
                 </div>
             </li>
