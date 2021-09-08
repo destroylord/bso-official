@@ -23,17 +23,23 @@
                                 </tr>
                               </thead>
                               <tbody>
+                                @forelse ($getStructure as $item)
                                 <tr>
-                                  @forelse ($getStructure as $item)
                                       <td> {{$loop->iteration}} </td>
-                                      <td><img src="{{Storage::url($item->images)}}" alt=""></td>
+                                      <td><img src="{{URL::asset('storage/'.$item->images)}}" width="100" alt=""></td>
                                       <td>{{$item->name}}</td>
                                       <td>{{$item->position}}</td>
                                       <td>{{$item->CategoryStructure->name}}</td>
                                       <td>
-                                        <a href="" class="btn btn-warning">Edit</a>
-                                        <a href="" class="btn btn-danger">hapus</a>
+                                        <a href=" {{route('admin.structures.edit', $item->id)}} " class="btn btn-warning">Edit</a>
+                                        <form action=" {{route('admin.structures.destroy', $item->id)}} " method="POST">
+                                          @csrf
+                                          @method('DELETE')
+                                          <button type="submit" class="btn btn-danger">Hapus</button>
+                                        </form>
                                       </td>
+                                </tr>
+                                <tr>
                                   @empty
                                     <td colspan="6" style="text-align:center">Kosong</td>
                                   @endforelse
