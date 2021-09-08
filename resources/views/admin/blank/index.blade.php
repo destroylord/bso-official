@@ -124,7 +124,11 @@
                                   <td>{{ $item->created_at->format('d M Y') }}</td>
                                   <td>
                                         <button class="btn btn-warning btn-sm">Edit</button>
-                                        <button class="btn btn-danger btn-sm">Delete</button>
+                                        <form action=" {{route('admin.posts.destroy', $item->id)}} " method="POST">
+                                            @csrf
+                                            @method('DELETE')
+                                            <button type="submit" class="btn btn-danger">Hapus</button>
+                                          </form>
                                   </td>
                               </tr>
                               <tr>

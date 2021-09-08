@@ -20,4 +20,8 @@ class DashboardController extends Controller
             'blog' => Post::all()
         ]);
     }
+    public function destroy()
+    {
+        
+    }
 }

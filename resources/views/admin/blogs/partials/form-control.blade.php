@@ -19,7 +19,7 @@
                 <h6 class="m-0 font-weight-bold text-primary">Hello</h6>
             </div>
             <div class="card-body">
-                <input type="file" class="form-control" name="images">
+                <input type="file" class="form-control" name="images" accept="image/*">
             </div>
             <div class="card-footer">
                 <button class="btn btn-primary">{{$title ?? 'update'}}</button>

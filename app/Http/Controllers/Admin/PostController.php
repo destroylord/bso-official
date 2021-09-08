@@ -92,8 +92,13 @@ class PostController extends Controller
      * @param  \App\Models\Post  $post
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Post $post)
+    public function destroy($id)
     {
-        //
+        $post = Post::find($id);
+        $image_path = public_path()."/storage/".$post->images;
+        unlink($image_path);
+        $post->delete();
+
+        return back();
     }
 }
