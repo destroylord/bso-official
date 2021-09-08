@@ -23,20 +23,21 @@
                                 </tr>
                               </thead>
                               <tbody>
-                                {{-- <tr>
-                                  @forelse ($blog as $item)
+                                <tr>
+                                  @forelse ($getStructure as $item)
                                       <td> {{$loop->iteration}} </td>
-                                      <td>{{$item->title}}</td>
-                                      <td>{{$item->slug}}</td>
-                                      <td>{{$item->description}}</td>
-                                      <td>{{ $item->created_at->format('d M Y') }}</td>
+                                      <td><img src="{{Storage::url($item->images)}}" alt=""></td>
+                                      <td>{{$item->name}}</td>
+                                      <td>{{$item->position}}</td>
+                                      <td>{{$item->CategoryStructure->name}}</td>
                                       <td>
-                                            <button class="btn btn-warning">Edit</button>
+                                        <a href="" class="btn btn-warning">Edit</a>
+                                        <a href="" class="btn btn-danger">hapus</a>
                                       </td>
                                   @empty
                                     <td colspan="6" style="text-align:center">Kosong</td>
                                   @endforelse
-                                </tr> --}}
+                                </tr>
                               </tbody>
                           </table>
                         </div>

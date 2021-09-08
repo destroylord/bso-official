@@ -14,7 +14,9 @@ class StructureController extends Controller
 {
     public function index()
     {
-        return view('admin.so.index');
+        $getStructure = StructureOrganization::all();
+        // dd($getStructure);
+        return view('admin.so.index', compact('getStructure'));
     }
 
     public function create()
@@ -26,10 +28,13 @@ class StructureController extends Controller
 
     public function store(StructureRequest $request)
     {
-        $imgName = time(). '.' . $request->images->extension();
-        $path = $request->images->storeAs('structure/images', $imgName);
-
         $attr = $request->all();
+
+
+        $files = $request->file('images');
+        $imgName = time(). '.' . $request->images->extension();
+        $path = $files->storeAs('structure', $imgName);
+
         $attr['images'] = $path;
 
         StructureOrganization::create($attr);

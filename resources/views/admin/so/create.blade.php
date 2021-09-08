@@ -37,7 +37,7 @@
                         </h6>
                     </div>
                     <div class="card-body">
-                        <select name="category_strucure_id" id="category_structure" class="form-control">
+                        <select name="category_structure_id" id="category_structure" class="form-control">
                             <option value="" selected disabled>Pilih kategori</option>
                             @foreach ($category_structures as $cs)
                                 <option value="{{ $cs->id }}">{{ $cs->name }}</option>
