@@ -15,7 +15,7 @@ class CreateVimisTable extends Migration
     {
         Schema::create('vimis', function (Blueprint $table) {
             $table->increments('id');
-            $table->string('images')->nullable();
+            // $table->string('images')->nullable();
             $table->text('visi');
             $table->text('misi');
             $table->timestamps();

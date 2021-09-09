@@ -2,7 +2,7 @@
 
 namespace App\Models;
 
-use App\Models\Web\Structure;
+use App\Models\StructureOrganization;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
@@ -16,6 +16,6 @@ class CategoryStructure extends Model
 
     public function structures()
     {
-        return $this->hasMany(Structure::class);
+        return $this->hasMany(StructureOrganization::class);
     }
 }

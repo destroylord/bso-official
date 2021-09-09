@@ -16,7 +16,8 @@ class VimiController extends Controller
      */
     public function index()
     {
-        return view('admin.vimi.index');
+        $get = Vimi::find(1);
+        return view('admin.vimi.index', compact('get'));
     }
 
     /**
@@ -37,22 +38,7 @@ class VimiController extends Controller
      */
     public function store(Request $request)
     {
-        
-        $request->validate([
-            'images' => 'required|mimes:jpeg,png,jpg,gif,svg|max:2048',
-        ]);
-    
-        if ($request->hasFile('images')) {
-            $imgName = time(). '.' . $request->images->extension();
-            $path = $request->images->storeAs('vimi/images', $imgName);
-        }
-
-        $attr = $request->all();
-        $attr['images'] = $path;
-        
-        Vimi::create($attr);
-        
-        return back();
+        //  request store
     }
 
     /**
@@ -86,7 +72,13 @@ class VimiController extends Controller
      */
     public function update(Request $request, Vimi $vimi)
     {
-        //
+        $vimi = Vimi::find(1);
+
+        $vimi->visi = $request->visi;
+        $vimi->misi = $request->misi;
+
+        $vimi->save();
+        return back();
     }
 
     /**
